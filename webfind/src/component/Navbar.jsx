@@ -83,17 +83,17 @@ const Navbar = () => {
 
 
             {/* {search and others} */}
-            <div className='flex items-center gap-8 cursor-pointer'>
+            <div className='flex items-center gap-4 cursor-pointer'>
                 <div className="relative" ref={searchRef}>
-                    {/* 🔍 Search Icon */}
+                    {/* Search Icon */}
                     <div
-                        className="cursor-pointer p-2 rounded-full hover:bg-gray-200 transition"
+                        className="cursor-pointer p-1 rounded-full hover:bg-gray-200 transition"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         <img src="/search.svg" alt="Search" className="w-7 h-7" />
                     </div>
 
-                    {/* 🔍 Search Popup */}
+                    {/* Search Popup */}
                     {isOpen && (
                         <div className="absolute top-0 right-12 bg-white shadow-md p-2 rounded-lg w-50 animate-fade-in">
                             <input
