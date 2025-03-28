@@ -4,86 +4,92 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div className="w-full h-[100vh] flex items-center justify-center mt-40">
-      <div className="bg-gray-100 px-10 py-15 rounded-3xl border-2 border-gray-200">
-        <p className="text-5xl font-bold text-center">Register</p>
+    <div className="w-full min-h-screen flex items-center justify-center bg-gray-100 px-4">
+      <div className="bg-white px-6 py-8 md:px-10 md:py-10 rounded-3xl border border-gray-200 shadow-lg w-full max-w-md">
+        {/* Title */}
+        <h2 className="text-3xl md:text-5xl font-bold text-center">Register</h2>
 
         <div className="mt-6">
           {/* Full Name */}
-          <div>
-            <label className="text-lg font-medium">Full Name</label>
+          <div className="mb-4">
+            <label className="text-sm md:text-lg font-medium" htmlFor="name">Full Name</label>
             <input
-              className="w-full border-2 border-gray-300 rounded-xl p-4 mt-1 bg-transparent"
+              id="name"
+              className="w-full border border-gray-300 rounded-xl p-3 mt-1 bg-gray-50 focus:ring-2 focus:ring-violet-400 focus:outline-none"
               placeholder="Enter your Name"
               type="text"
             />
           </div>
 
           {/* Date of Birth */}
-          <div>
-            <label className="text-lg font-medium">Date of Birth</label>
+          <div className="mb-4">
+            <label className="text-sm md:text-lg font-medium" htmlFor="dob">Date of Birth</label>
             <input
-              className="w-full border-2 border-gray-300 rounded-xl p-4 mt-1 bg-transparent"
-              placeholder="Enter your DOB"
+              id="dob"
+              className="w-full border border-gray-300 rounded-xl p-3 mt-1 bg-gray-50 focus:ring-2 focus:ring-violet-400 focus:outline-none"
               type="date"
             />
           </div>
 
           {/* Email */}
-          <div>
-            <label className="text-lg font-medium">Email</label>
+          <div className="mb-4">
+            <label className="text-sm md:text-lg font-medium" htmlFor="email">Email</label>
             <input
-              className="w-full border-2 border-gray-300 rounded-xl p-4 mt-1 bg-transparent"
+              id="email"
+              className="w-full border border-gray-300 rounded-xl p-3 mt-1 bg-gray-50 focus:ring-2 focus:ring-violet-400 focus:outline-none"
               placeholder="Enter your Email"
               type="email"
             />
           </div>
 
           {/* Password */}
-          <div>
-            <label className="text-lg font-medium">Password</label>
+          <div className="mb-4">
+            <label className="text-sm md:text-lg font-medium" htmlFor="password">Password</label>
             <input
-              className="w-full border-2 border-gray-300 rounded-xl p-4 mt-1 bg-transparent"
+              id="password"
+              className="w-full border border-gray-300 rounded-xl p-3 mt-1 bg-gray-50 focus:ring-2 focus:ring-violet-400 focus:outline-none"
               placeholder="Enter your Password"
               type="password"
             />
           </div>
 
           {/* Confirm Password */}
-          <div>
-            <label className="text-lg font-medium">Confirm Password</label>
+          <div className="mb-4">
+            <label className="text-sm md:text-lg font-medium" htmlFor="confirm-password">Confirm Password</label>
             <input
-              className="w-full border-2 border-gray-300 rounded-xl p-4 mt-1 bg-transparent"
+              id="confirm-password"
+              className="w-full border border-gray-300 rounded-xl p-3 mt-1 bg-gray-50 focus:ring-2 focus:ring-violet-400 focus:outline-none"
               placeholder="Confirm your Password"
               type="password"
             />
           </div>
 
-          {/* Remember Me & Forgot Password */}
-          <div className="mt-8 flex  items-baseline">
-            <input type="checkbox" id="terms" className="mr-2" />
-            <label className="text-base font-medium" htmlFor="terms">
-              Terms and Conditions
+          {/* Terms and Conditions */}
+          <div className="mt-4 flex items-center">
+            <input type="checkbox" id="terms" className="mr-2 accent-violet-500" />
+            <label className="text-sm md:text-base font-medium" htmlFor="terms">
+              I agree to the <span className="text-violet-500">Terms and Conditions</span>
             </label>
           </div>
 
-
           {/* Buttons */}
-          <div className="mt-8 flex flex-col gap-y-4">
-            <button className="py-2 rounded-xl active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01] ease-in-out bg-violet-500 text-lg text-white font-bold">
-              Sign in
+          <div className="mt-6 flex flex-col gap-4">
+            {/* Register Button */}
+            <button className="py-3 rounded-xl active:scale-95 transition-all hover:scale-105 bg-violet-500 text-white text-lg font-bold shadow-md">
+              Register
             </button>
 
-            <button className="flex items-center justify-center active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01] ease-in-out border-2 border-gray-100 py-2 gap-2">
-              <FaGoogle />
+            {/* Google Sign-In Button */}
+            <button className="flex items-center justify-center border border-gray-300 py-3 rounded-xl active:scale-95 transition-all hover:scale-105 bg-white shadow-md text-gray-700 font-medium">
+              <FaGoogle className="mr-2 text-red-500" />
               Sign in with Google
             </button>
           </div>
 
           {/* Already have an account? */}
-          <div className="mt-8 flex items-center justify-center">
-            <p className="font-medium text-base">Already have an account?</p>
-            <Link to="/login" className="font-medium text-base text-violet-500 ml-2">
+          <div className="mt-6 flex justify-center">
+            <p className="text-sm md:text-base">Already have an account?</p>
+            <Link to="/login" className="text-sm md:text-base font-medium text-violet-500 ml-2 hover:underline">
               Login
             </Link>
           </div>

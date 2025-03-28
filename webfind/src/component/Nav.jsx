@@ -69,17 +69,17 @@ const Nav = () => {
 
             {/* Dropdown Menu */}
             {isDropdownOpen && (
-              <div className="absolute top-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg w-48 flex flex-col py-2">
+              <div className="absolute top-12 left-0 bg-transparent rounded-lg shadow-lg w-48 flex flex-col py-2">
                 <Link
                   to="/employerregister"
-                  className="flex items-center px-4 py-2 text-gray-700 hover:bg-green-100 transition-all"
+                  className="flex items-center px-4 py-2 font-semibold text-gray-700 bg-gray-200 rounded-2xl hover:bg-green-100 transition-all"
                 >
                   <FaUserTie className="mr-2" />
                   As Employer
                 </Link>
                 <Link
                   to="/register"
-                  className="flex items-center px-4 py-2 text-gray-700 hover:bg-green-100 transition-all"
+                  className="flex mt-2 font-semibold items-center px-4 py-2 text-gray-700 bg-gray-200 rounded-2xl  hover:bg-green-100 transition-all"
                 >
                   <FaUser className="mr-2" />
                   As Employee
